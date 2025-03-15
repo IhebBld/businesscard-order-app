@@ -3,7 +3,9 @@
 
 # To install:
 Node - Npm - Yarn
+
 npm install
+
 yarn install
 # Go to Client Folder
 yarn install
@@ -19,17 +21,22 @@ OR
 npm install bcrypt body-parser cookie-parser cors express express-session multer mysql nodemon
 # To Start Project
 Server:
+
 npm run dev
+
 Client:
+
 yarn start
 
 # If PowerShell has script execution disabled
 Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+
 npm install -g yarn
 # If you want to disabled again
 Set-ExecutionPolicy Restricted -Scope CurrentUser
 # Install Dependencies Directly from package.json
 yarn install
+
 npm install
 # To check
 yarn install --check-files
