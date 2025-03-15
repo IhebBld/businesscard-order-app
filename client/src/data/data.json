@@ -1,0 +1,60 @@
+{
+  "Header": {
+    "title": "MyCardMaker",
+    "paragraph": "Your brand, your card, your way."
+  },
+  "Product": {
+    "paragraph": "Your perfect business card is just a few clicks away. Share your vision with us and we'll transform it into a stunning, professional design. From paper stock to font style, we've got you covered. Your business card, your way.",
+    "Why": [
+      "customizable",
+      "Quick and easy",
+      "Premium materials",
+      "Exceptional quality"
+    ]
+  },
+  "Gallery": [
+    {
+      "egImage": "img/gallery/01.jpeg"
+    },
+    {
+      "egImage": "img/gallery/02.jpeg"
+    },
+    {
+      "egImage": "img/gallery/03.jpeg"
+    }
+  ],
+  "Process": [
+    {
+      "name": "Fill in Your Information",
+      "text": "Start by providing essential details about your business and yourself. Our user-friendly form guides you through the process, ensuring all necessary information is captured accurately."
+    },
+    {
+      "name": "Choose Your Design Style",
+      "text": "Explore a vast array of design templates tailored to different industries and preferences. Get inspired by our sample business cards and customize them to match your unique brand identity."
+    },
+    {
+      "name": "Our Design Expertise at Work",
+      "text": "Let our skilled designers transform your vision into a stunning business card design. We combine your input with our creative flair to create a card that perfectly represents your business."
+    },
+    {
+      "name": "Review and Refine",
+      "text": "We present you with design samples for your approval. Share your feedback and suggestions, and we will make the necessary adjustments to meet your exact requirements."
+    },
+    {
+      "name": "Your Business Cards, Delivered",
+      "text": "Once you're satisfied with the design, we'll produce high-quality business cards that meet your specifications. Expect your finished product to arrive promptly."
+    },
+    {
+      "name": "Dedicated Support",
+      "text": "Our commitment to customer satisfaction doesn't end with delivery. We offer ongoing support to address any questions or concerns you may have. Feel free to contact our support team for assistance."
+    }
+  ],
+  "Contact": {
+    "address": "4321 California St, San Francisco, CA 12345 ",
+    "phone": "+1 123 456 1234",
+    "email": "info@company.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  }
+}

@@ -1,0 +1,108 @@
+:root {
+  --yellow: linear-gradient(180deg, #f8d49a -146.42%, #fad79d -46.42%);
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: #788097;
+  --purple: linear-gradient(180deg, #bb67ff 0%, #c484f3 100%);
+  --pink: #ff919d;
+  --glass: rgba(255, 255, 255, 0.54);
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  --activeItem: #f799a354;
+}
+#profil {
+  /* background: -webkit-linear-gradient(left, #3931af, #00c6ff); */
+  background: linear-gradient(
+    106.37deg,
+    #6372ff 29.63%,
+    #5ca9fb 51.55%,
+    #92c6e8 90.85%
+  );
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#profil .emp-edit {
+  padding-top: 3%;
+  display: grid;
+  height: 90%;
+  width: 80%;
+  background: var(--glass);
+  border-radius: 2rem;
+  grid-template-columns: 5rem auto 20rem;
+  overflow: hidden;
+}
+/* #profil .edit-img {
+  text-align: center;
+}
+#profil .edit-img img {
+  width: 70%;
+  height: 100%;
+}
+#profil .edit-img .file {
+  position: relative;
+  overflow: hidden;
+  margin-top: -20%;
+  width: 70%;
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+  background: #212529b8;
+}
+#profil .edit-img .file input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+#profil .edit-head h5 {
+  color: #333;
+}
+#profil .edit-edit-btn {
+  border: none;
+  border-radius: 1.5rem;
+  width: 70%;
+  padding: 2%;
+  font-weight: 600;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+#profil .edit-head .nav-tabs {
+  margin-bottom: 5%;
+}
+#profil .edit-head .nav-tabs .nav-link {
+  font-weight: 600;
+  border: none;
+}
+#profil .edit-head .nav-tabs .nav-link.active {
+  border: none;
+  border-bottom: 2px solid #0062cc;
+}
+#profil .edit-work {
+  padding: 14%;
+  margin-top: -15%;
+}
+#profil .edit-work p {
+  font-size: 12px;
+  color: #818182;
+  font-weight: 600;
+  margin-top: 10%;
+}
+#profil .edit-work a {
+  text-decoration: none;
+  color: #495057;
+  font-weight: 600;
+  font-size: 14px;
+}
+#profil .edit-work ul {
+  list-style: none;
+}
+#profil .edit-tab label {
+  font-weight: 600;
+}
+#profil .edit-tab p {
+  font-weight: 600;
+  color: #0062cc;
+} */
