@@ -4,8 +4,7 @@ import { useLocation } from "react-router-dom";
 export const Header = (props) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-  const isFormPage = location.pathname === "/form";
-  const isPropPage = location.pathname === "/designs";
+  const isFormPage = location.pathname === "/businesscard";
   return (
     <header id="header">
       <div className="intro">
@@ -25,15 +24,10 @@ export const Header = (props) => {
                     <span></span>
                   </h2>
                 )}
-                {isPropPage && (
-                  <h2>
-                    {props.data ? props.data.title : "Loading"}
-                    <span></span>
-                  </h2>
-                )}
+
                 <p>{props.data ? props.data.paragraph : "Loading"}</p>
                 {isHomePage && (
-                  <a href="/form" className="btn btn-custom btn-lg page-scroll">
+                  <a href="/businesscard" className="btn btn-custom btn-lg page-scroll">
                     Create
                   </a>
                 )}

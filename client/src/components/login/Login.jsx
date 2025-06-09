@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 export const Login = () => {
-  //buttons design
   const [action, setAction] = useState("Login");
-  //signup functions
   const [nameReg, setNameReg] = useState("");
   const [passwordReg, setPasswordReg] = useState("");
   const [emailReg, setEmailReg] = useState("");
+  const [loginError, setLoginError] = useState("");
+  const [loginStatus, setLoginStatus] = useState("");
+  const [emailLog, setEmailLog] = useState("");
+  const [passwordLog, setPasswordLog] = useState("");
+  const navigate = useNavigate();
   axios.defaults.withCredentials = true;
+
   const register = (e) => {
     e.preventDefault();
     axios
@@ -19,15 +23,11 @@ export const Login = () => {
         role: "user",
       })
       .then((response) => {
-        console.log(response);
+        setAction("Login");
+        setLoginStatus("Registration successful! Please login.");
       });
   };
-  //login status
-  const [loginStatus, setLoginStatus] = useState("");
-  //login
-  const [emailLog, setEmailLog] = useState("");
-  const [passwordLog, setPasswordLog] = useState("");
-  const navigate = useNavigate();
+
   const login = (e) => {
     e.preventDefault();
     axios
@@ -37,13 +37,14 @@ export const Login = () => {
       })
       .then((response) => {
         if (response.data.message) {
-          setLoginStatus(response.data.message);
+          setLoginError("Username/password wrong combination");
         } else {
           setLoginStatus(response.data[0].username);
           navigate("/");
         }
       });
   };
+
   useEffect(() => {
     axios.get("http://localhost:5000/login").then((response) => {
       if (response.data.loggedIn == true) {
@@ -60,8 +61,7 @@ export const Login = () => {
       </div>
 
       {action === "Sign Up" ? (
-        <form>
-          {/* registration */}
+        <form onSubmit={register}>
           <div className="inputs">
             <div className="input">
               <img src="/img/login/person.png" alt="" />
@@ -107,15 +107,14 @@ export const Login = () => {
           <div className="submit-container">
             <button
               className="btn btn-custom btn-lg page-scroll"
-              onClick={register}
+              type="submit"
             >
               Register
             </button>
           </div>
         </form>
       ) : (
-        // login
-        <form>
+        <form onSubmit={login}>
           <div className="inputs">
             <div className="input">
               <img src="/img/login/email.png" alt="" />
@@ -142,20 +141,22 @@ export const Login = () => {
               />
             </div>
           </div>
-          {/* <div className="forgot-password">
-            Please log in to create your business card.
-          </div> */}
           <div className="forgot-password">
+            {loginError && (
+              <div
+                className="error-message"
+                style={{ color: "red", marginBottom: "10px" }}
+              >
+                {loginError}
+              </div>
+            )}
             Don't have an account?{" "}
             <span onClick={() => setAction("Sign Up")}>Sign Up</span>
           </div>
-          {/* <div className="forgot-password">
-            Lost Password? <span>Click Here</span>
-          </div> */}
           <div className="submit-container">
             <button
               className="btn btn-custom btn-lg page-scroll"
-              onClick={login}
+              type="submit"
             >
               Login
             </button>

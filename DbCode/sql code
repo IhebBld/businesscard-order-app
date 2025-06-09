@@ -1,34 +1,8 @@
-# Business Card Project
-
-A business card website where users can fill out a form, choose a design from various categories, and save it to their profile. Includes an admin dashboard to manage user submissions, designs, and profiles.
-
----
-
-## Features
-
-- User registration and login
-- Fill out business card details
-- Choose from multiple design categories
-- Save and manage your cards
-- Admin dashboard for managing users, designs, and submissions
-
----
-
-### Prerequisites
-
-- Node.js & npm
-- Yarn (optional)
-- XAMPP or MySQL server
-
-### Database Setup
-
-- Start MySQL (e.g., via XAMPP)
-- Create the database and tables using the following SQL:
-
-```sql
+-- Create the database
 CREATE DATABASE IF NOT EXISTS mycardmaker;
 USE mycardmaker;
 
+-- Users table
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(100) NOT NULL,
@@ -37,6 +11,7 @@ CREATE TABLE IF NOT EXISTS users (
     role VARCHAR(50) DEFAULT 'user'
 );
 
+-- Order details table
 CREATE TABLE IF NOT EXISTS order_details (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -50,6 +25,7 @@ CREATE TABLE IF NOT EXISTS order_details (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
 );
 
+-- Products table
 CREATE TABLE IF NOT EXISTS products (
     id INT AUTO_INCREMENT PRIMARY KEY,
     image VARCHAR(255) NOT NULL,
